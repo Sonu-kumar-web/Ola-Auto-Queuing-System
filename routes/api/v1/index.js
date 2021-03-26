@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express();
 
-const jobController = require('../../../controllers/api/v1/job');
+const driverController = require("../../../controllers/api/v1/driver_controller");
 
-
-router.get('/jobs', jobController.jobs);
+router.post("/registerDriver", driverController.registerDriver);
 
 module.exports = router;
