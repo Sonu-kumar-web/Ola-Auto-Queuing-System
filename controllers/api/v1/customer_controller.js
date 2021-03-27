@@ -16,7 +16,7 @@ module.exports.customerRequest = async (req, res) => {
 // get customer request Information
 module.exports.requests = async (req, res) => {
   try {
-    let totalRequests = await Customer.find().populate("Driver");
+    let totalRequests = await Customer.find();
     return res.status(200).json(totalRequests);
   } catch (error) {
     console.log(error);
