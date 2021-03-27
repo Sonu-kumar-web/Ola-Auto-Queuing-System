@@ -1,4 +1,4 @@
-const Driver = require("../../../models/driver");
+const Driver = require("../../../models/Driver");
 
 // Register new drivers
 module.exports.registerDriver = async (req, res) => {
