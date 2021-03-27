@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const customerSchema = mongoose.Schema(
+const customerSchema = new mongoose.Schema(
   {
     customerId: {
       type: String,
       required: true,
     },
-    driver: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Driver",
+    status: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }

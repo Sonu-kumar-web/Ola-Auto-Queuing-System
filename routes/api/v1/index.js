@@ -6,6 +6,7 @@ const customerController = require("../../../controllers/api/v1/customer_control
 
 router.post("/registerDriver", driverController.registerDriver);
 router.get("/getDrivers", driverController.getDrivers);
+router.post("/accept", driverController.accept);
 
 router.post("/customerRequest", customerController.customerRequest);
 router.get("/requests", customerController.requests);

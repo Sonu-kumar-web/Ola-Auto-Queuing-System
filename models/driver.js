@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const driverSchema = mongoose.Schema(
+const driverSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -9,6 +9,10 @@ const driverSchema = mongoose.Schema(
     status: {
       type: String,
       required: true,
+    },
+    customerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Customer",
     },
   },
   {
