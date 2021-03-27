@@ -9,6 +9,6 @@ router.get("/getDrivers", driverController.getDrivers);
 router.post("/accept", driverController.accept);
 
 router.post("/customerRequest", customerController.customerRequest);
-router.get("/requests", customerController.requests);
+router.get("/allRequests", customerController.allRequests);
 
 module.exports = router;
