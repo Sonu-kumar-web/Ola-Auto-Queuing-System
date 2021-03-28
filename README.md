@@ -1,6 +1,6 @@
 # Ola-Auto-Queuing-System
 
-#### (Note- Driver app, Customer app and Dashboard are available in same folder.)
+#### (Note- Driver app, Customer app and Dashboard app are available in same folder.)
 
 #### Project Setup
 1. Clone or Download the Repo.
