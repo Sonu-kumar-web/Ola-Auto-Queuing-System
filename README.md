@@ -1,6 +1,6 @@
 # Ola-Auto-Queuing-System
 
-#### Setup the Project
+#### Project Setup
 1. Clone or Download the Repo.
 2. `cd medibuddy` goto the Repo using Terminal.
 3. Run `npm run dev` to start backend and frontend concurrently.<br>
