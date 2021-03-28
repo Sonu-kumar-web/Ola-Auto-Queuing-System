@@ -25,7 +25,7 @@ module.exports.registerDriver = async (req, res) => {
   }
 };
 
-// Get driver details >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Get All driver details >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 module.exports.getDrivers = async (req, res) => {
   try {
     let drivers = await Driver.find();
@@ -54,7 +54,7 @@ module.exports.accept = async (req, res) => {
     // Changed driver and customer status after 5 minutes
     setTimeout(() => {
       changeStatus(driverId, customerId);
-    }, 2000 * 60 * 5);
+    }, 1000 * 60 * 5);
 
     return res.status(200).json({ driverDetails });
   } catch (error) {
@@ -73,4 +73,15 @@ changeStatus = async (driverId, customerId) => {
 
   // Update customer data
   await Customer.findByIdAndUpdate(customerId, { status: "Completed" });
+};
+
+// To get Single driver data
+module.exports.singleDriver = async (req, res) => {
+  try {
+    let result = await Driver.findById(req.query.driverId);
+    return res.status(200).json(result);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ msg: "Internal Server Error!" });
+  }
 };

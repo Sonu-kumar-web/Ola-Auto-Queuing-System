@@ -15,11 +15,23 @@ module.exports.customerRequest = async (req, res) => {
   }
 };
 
-// get customer request Information
+// get All customer request Information
 module.exports.allRequests = async (req, res) => {
   try {
     let totalRequests = await Customer.find();
     return res.status(200).json(totalRequests);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ msg: "Internal Server Error!" });
+  }
+};
+
+// Get a single request detail
+module.exports.request = async (req, res) => {
+  try {
+    let currentRequest = await Customer.findById(req.query.request_id);
+    console.log(currentRequest);
+    return res.status(200).json(currentRequest);
   } catch (error) {
     console.log(error);
     return res.status(500).json({ msg: "Internal Server Error!" });
