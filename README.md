@@ -1,5 +1,7 @@
 # Ola-Auto-Queuing-System
 
+#### (Note- Driver app, Customer app and Dashboard are available in same folder.)
+
 #### Project Setup
 1. Clone or Download the Repo.
 2. `cd medibuddy` goto the Repo using Terminal.
